@@ -44,32 +44,39 @@ while True:
     #### Sensor Configuration ###########################################
     cfg = config.Config(
         i2c = {
-            "port": 0, # I2C bus number
+            "port": 1, # I2C bus number
         },
 
 	    bus = [
                 {
-                 "name": "adc",
-                 "type": "i2cadc01", 
-                 #"channel": 7, 
+                "type": "i2chub",
+                "address": 0x70,
+                
+                "children": [
+                    {"name": "adc", "type": "i2cadc01" , "channel": 1, },   
+			],
                 },
             ],
     )
 
 
+
     cfg.initialize()
     adc = cfg.get_device("adc")
+
+    time.sleep(0.5)
 
     n =  t[-1] + 1
     try:
         while True:
+	    adc.route();
             # Temperature readout
             temperature = 0
             temperature = adc.readTemp()
-            temperature -= 3
+            #temperature -= 1.5
             print "Internal Temperature =", float("{0:.2f}".format(temperature))
            
-            time.sleep(10)
+            time.sleep(1)
 
             # Voltage readout
             voltage = adc.readADC()
