@@ -53,7 +53,7 @@ print
 try:
     while True:
 		newlog = 0
-		filename = '/mnt/hroch/chemie/pH/'+str(datetime.datetime.now())+'.log'
+		filename = '/mnt/hroch/chemie/pH/pH'+str(datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S"))+'.log'
 		while True:
 				s = ''
 
