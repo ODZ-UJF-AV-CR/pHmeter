@@ -11,6 +11,9 @@ import pylirc
 
 color = ['\33[0m','\33[91m','\33[92m','\33[93m','\33[94m','\33[95m','\33[96m']
 
+a = [0, -18.18, -18.18, -18.18, -18.18, -18.18, -18.18]
+b = [0, 7.46, 7.46, 7.46, 7.46, 7.46, 7.46]
+
 #### Sensor Configuration ###########################################
 cfg = config.Config(
     i2c =
@@ -40,15 +43,17 @@ cfg = config.Config(
 cfg.initialize()
 adc = [0,cfg.get_device("adc1"),cfg.get_device("adc2"),cfg.get_device("adc3"),cfg.get_device("adc4"),cfg.get_device("adc5"),cfg.get_device("adc6")]
 
-pylirc.init("pylirc", "./conf")
+pylirc.init("pylirc", "/home/odroid/git/pHmeter/conf")
 
-time.sleep(2)
-
+for n in range(9,-1,-1):
+	print n,'****** pHmeter www.mlab.cz ******'
+	time.sleep(1)
+print
 
 try:
     while True:
 		newlog = 0
-		filename = '/mnt/hroch/kakona/pH/'+str(datetime.datetime.now())+'.log'
+		filename = '/mnt/hroch/chemie/pH/'+str(datetime.datetime.now())+'.log'
 		while True:
 				s = ''
 
@@ -72,7 +77,7 @@ try:
 						print " pH",
 					# Voltage readout
 					voltage = adc[n].readADC()
-					ph = -(voltage / 0.050) + 7   #pH
+					ph = voltage * a[n] + b[n]   #pH
 					print color[n], "{:5.2f}".format(ph),
 					s += ",{:5.2f}".format(ph)
 					#time.sleep(1)
