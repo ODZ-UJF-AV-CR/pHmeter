@@ -1,0 +1,28 @@
+begin
+  remote = *
+  button = KEY_NUMERIC_1
+  prog = pylirc
+  config = x
+end
+
+begin
+  remote = *
+  button = KEY_NUMERIC_2
+  prog = pylirc
+  config = q
+end
+
+begin
+  remote = *
+  button = KEY_NUMERIC_3
+  prog = pylirc
+  config = q
+end
+
+begin
+  remote = *
+  button = KEY_RECORD
+  prog = pylirc
+  config = x
+end
+
