@@ -3,11 +3,15 @@ pHmeter from MLAB modules
 
 ## Dependecies
 
-[MLAB-I2c-modules](https://github.com/MLAB-project/MLAB-I2c-modules)
+[pymlab](https://github.com/MLAB-project/pymlab)
 
 [mplh5canvas](https://pypi.python.org/pypi/mplh5canvas)
 
 python-matplotlib
 
+
+## Installation
+
+    sudo apt-get install python-pylirc python-matplotlib
 
 
