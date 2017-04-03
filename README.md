@@ -1,6 +1,6 @@
 # pHmeter
 
-Open-source multiple probe Phmeter. 
+Open-source multiple probe [Phmeter](https://en.wikipedia.org/wiki/PH). 
 
 <img src="https://raw.githubusercontent.com/ODZ-UJF-AV-CR/pHmeter/master/DOC/SRC/img/PHMET01A_Small.jpg" width="600" />
 
