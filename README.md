@@ -1,13 +1,17 @@
 # pHmeter
-pHmeter from MLAB modules
+
+Open-source multiple probe Phmeter. 
 
 ## Dependecies
 
-[MLAB-I2c-modules](https://github.com/MLAB-project/MLAB-I2c-modules)
+[Pymlab](https://github.com/MLAB-project/pymlab)
 
 [mplh5canvas](https://pypi.python.org/pypi/mplh5canvas)
 
 python-matplotlib
 
+## Documentation
+
+* [Mlab wiki](http://wiki.mlab.cz/doku.php?id=en:phmet)
 
 
