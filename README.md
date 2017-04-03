@@ -2,6 +2,12 @@
 
 Open-source multiple probe Phmeter. 
 
+<img src="https://raw.githubusercontent.com/ODZ-UJF-AV-CR/pHmeter/master/DOC/SRC/img/PHMET01A_Small.jpg" width="600" />
+
+<img src="https://raw.githubusercontent.com/ODZ-UJF-AV-CR/pHmeter/master/DOC/SRC/img/PHMET01_laboratory_use.jpg" width="600" />
+
+
+
 ## Dependecies
 
 [Pymlab](https://github.com/MLAB-project/pymlab)
